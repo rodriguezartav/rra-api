@@ -19,9 +19,8 @@ app.options("*", cors()); // include before other routes
 //
 app.use("/", indexRouter);
 app.use("/webhooks/heroku", require("./routes/webhooks/heroku"));
-app.use("/stocks", require("./routes/stocks"));
-app.use("/positions", require("./routes/positions"));
-app.use("/orders", require("./routes/orders"));
+app.use("/webhooks/linkedin", require("./routes/webhooks/linkedin"));
+app.use("/classes", require("./routes/classes"));
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
